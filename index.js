@@ -281,7 +281,7 @@ function render(movies, follow) {
   filtered.forEach(m => {
     const card = document.createElement('div');
     card.className = 'movie-card';
-    card.onclick = () => window.open(`https://google.com/search?q=${encodeURIComponent(m.title + ' movie watch online')}`);
+    card.onclick = () => window.open(`https://google.com/search?q=${encodeURIComponent(m.title + ' watch online')}`);
 
     card.innerHTML = `
       <img class="movie-poster" style="display: none;" alt="${m.title}">
