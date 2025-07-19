@@ -410,10 +410,10 @@
         font-size: 2rem;
       }
       
-      .search-form {
+      /*.search-form {
         flex-direction: column;
         align-items: stretch;
-      }
+      }*/
       
       .search-input {
         min-width: auto;

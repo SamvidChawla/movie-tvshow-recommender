@@ -9,7 +9,8 @@
 
 <body>
   <header>
-    <button class="btn btn-secondary btn-small" id="darkBtn" type="button">🌙 Dark Mode</button>
+    <button class="btn btn-secondary btn-small" id="darkBtn" type="button" style="margin-left: auto; display: block; margin-top: 0; margin-bottom: 0; padding-top: 0.2rem; padding-bottom: 0.2rem;"
+>🌙 Dark Mode</button>
     <h1>🎬ReelRadar: Movie & TV Show Recommender</h1>
   </header>
 
@@ -108,8 +109,8 @@
 
   <script>
     // Image source with fallbacks
-const getMovieImage = (title) => {
-  return `https://via.placeholder.com/400x600/4f46e5/ffffff?text=${encodeURIComponent(title)}`;
+const getMovieImage = () => {
+  return null;
 };
 
     const form = document.getElementById('promptForm'),
@@ -149,59 +150,59 @@ darkBtn.onclick = () => {
       form.requestSubmit();
     };
 
-    const useMock = true; // ✅ Toggle this to false to use the real API
+    const useMock = false; // ✅ Toggle this to false to use the real API
 
     // Enhanced mock data for better variety
     const mockMoviesDatabase = [
       {
         title: 'Life in Pieces',
         description: 'A comedy about one big family and their sometimes awkward, often hilarious, and ultimately beautiful milestone moments.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Schitt\'s Creek',
         description: 'A wealthy family suddenly finds themselves broke and forced to live in a small town they once bought as a joke.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Parks and Recreation',
         description: 'A mockumentary comedy series about local government in the fictional town of Pawnee, Indiana.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Modern Family',
         description: 'A mockumentary family sitcom that follows the lives of Jay Pritchett and his family.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'The Office',
         description: 'A mockumentary sitcom about the everyday lives of office employees at a paper company.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Friends',
         description: 'Follows the lives of six friends living in Manhattan as they navigate their careers and relationships.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Brooklyn Nine-Nine',
         description: 'A workplace comedy about a team of detectives and their leader in a Brooklyn police precinct.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'How I Met Your Mother',
         description: 'A father recounts to his children the events that led to his meeting their mother.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'The Good Place',
         description: 'A woman struggles to be a good person when she accidentally ends up in the afterlife.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Arrested Development',
         description: 'A wealthy family loses everything and must live in their only remaining asset - a model home.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       }
     ];
 
@@ -209,62 +210,62 @@ darkBtn.onclick = () => {
       {
         title: 'Avatar: The Way of Water',
         description: 'Jake Sully and his family continue their adventure in Pandora.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Wednesday',
         description: 'Wednesday Addams navigates life at Nevermore Academy.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Top Gun: Maverick',
         description: 'Pete "Maverick" Mitchell returns to train a new generation.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'The Batman',
         description: 'Dark detective story featuring a young Batman.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Stranger Things',
         description: 'A group of kids face supernatural threats in 1980s Hawkins.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'The Bear',
         description: 'A chef returns to Chicago to run his deceased brother\'s restaurant.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Euphoria',
         description: 'Teenagers navigate in modern America.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Breaking Bad',
         description: 'A chemistry teacher turns meth kingpin in this intense crime drama.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'The Mandalorian',
         description: 'A lone bounty hunter in the outer reaches of the galaxy beyond the New Republic.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Dune',
         description: 'Epic space opera about power, politics, and prophecy on a desert planet.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Inception',
         description: 'A mind-bending thriller about dream invasion and reality manipulation.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       },
       {
         title: 'Parasite',
         description: 'Korean thriller about class conflict and social inequality.',
-        get image() { return getMovieImage(this.title); }
+        get image() { return getMovieImage(); }
       }
     ];
 
@@ -305,8 +306,8 @@ darkBtn.onclick = () => {
           let fullPrompt = `${input.value}. I've already seen: ${seen.join(', ')}. Please avoid these.`;
 
           if (filters.stream && filters.stream !== 'Any') fullPrompt += ` Strictly show content available on ${filters.stream}.`;
-          if (filters.genre && filters.genre !== 'Any') fullPrompt += ` I want ${filters.genre} genres.`;
-          if (filters.type && filters.type !== 'Any') fullPrompt += ` I'm in the mood for a ${filters.type}.`;
+          if (filters.genre && filters.genre !== 'Any') fullPrompt += ` I strictly want ${filters.genre} genres.`;
+          if (filters.type && filters.type !== 'Any') fullPrompt += ` I'm strictly in the mood for a ${filters.type}.`;
 
           const res = await fetch('http://localhost:3000/ai', {
             method: 'POST',
@@ -611,9 +612,11 @@ async function showPopular() {
       const card = document.createElement("div");
       card.className = "movie-card";
       card.onclick = () => window.open(`https://google.com/search?q=${encodeURIComponent(item.title + ' movie watch online')}`);
-      
+      const imageHTML = item.image
+  ? `<img src="${item.image}" alt="${item.title}" class="movie-poster" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
+  : `<div class="movie-poster" style="display: flex;">${item.title}</div>`;
       card.innerHTML = `
-        <img src="${item.image}" alt="${item.title}" class="movie-poster" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      ${imageHTML}
         <div class="movie-poster" style="display: none;">${item.title}</div>
         <div class="movie-info">
           <h3 class="movie-title">${item.title}</h3>

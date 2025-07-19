@@ -81,7 +81,7 @@ Do NOT include image URLs or markdown links.
 Do NOT generate image links.
 Verify streaming service from mutliple latest realiable sources 
 If possible avoid information older than 3 months
-DO NOT consider Disney+ or Disneyhotstar content as JioHotstar content. They are different services!
+**Important**: JioHotstar shows only on JioHotstar—not grouped with Disney+
 
 End with a follow-up question like:(but not exactly)
 "Would you like recommendations based on a specific actor or genre?"
@@ -102,7 +102,7 @@ End with a follow-up question like:(but not exactly)
     for await (const chunk of stream) {
       if (chunk.text) fullText += chunk.text;
     }
-
+    console.log(fullText);
     const lines = fullText.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
     const parsedMovies = [];
 
