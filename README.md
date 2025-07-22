@@ -34,20 +34,20 @@
    git clone https://github.com/SamvidChawla/movie-tvshow-recommender
    cd ReelRadar-movie-recommender
 ```
-3. Install dependencies:
+2. Install dependencies:
 ```
    npm install
 ```   
-4. Create a `.env` file in the root directory with the following:
+3. Create a `.env` file in the root directory with the following:
 ```
    GEMINI_API_KEY=your_gemini_api_key
    TMDB_API_KEY=your_tmdb_api_key
 ```   
-5. Start the server:
+4. Start the server:
 ```
    node server.js
 ```   
-6. Open `index.html` in your browser.
+5. Open `index.html` in your browser.
 
 ---
 
