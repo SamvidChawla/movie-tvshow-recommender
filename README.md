@@ -65,3 +65,9 @@ README.md         # Project documentation
 ## License
 
 This project is for personal and educational use only.
+
+### Note on Third-Party Services
+
+This project uses the TMDb API and the Gemini API. All data and content from these services are subject to their respective terms of service.
+
+Users must obtain their own API keys and comply with TMDb and Gemini usage policies when running this software.
