@@ -281,7 +281,7 @@ function render(movies, follow) {
   filtered.forEach(m => {
     const card = document.createElement('div');
     card.className = 'movie-card';
-    card.onclick = () => window.open(`https://google.com/search?q=${encodeURIComponent(m.title + ' watch online')}`);
+    card.onclick = () => window.open(`https://google.com/search?q=${encodeURIComponent(m.title + '  watch online')}`);
 
     card.innerHTML = `
       <img class="movie-poster" style="display: none;" alt="${m.title}">
@@ -501,7 +501,7 @@ async function showPopular() {
     function createMovieCard(item) {
       const card = document.createElement("div");
       card.className = "movie-card";
-      card.onclick = () => window.open(`https://google.com/search?q=${encodeURIComponent(item.title + ' movie watch online')}`);
+      card.onclick = () => window.open(`https://google.com/search?q=${encodeURIComponent(item.title + 'watch online')}`);
       const imageHTML = item.image
   ? `<img src="${item.image}" alt="${item.title}" class="movie-poster" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">`
   : `<div class="movie-poster" style="display: flex;">${item.title}</div>`;

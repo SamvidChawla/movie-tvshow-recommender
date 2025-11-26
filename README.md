@@ -54,7 +54,7 @@
 ## Folder Structure
 
 ```
-/public           # Frontend files (HTML, CSS, JS)
+# Frontend files (HTML, CSS, JS)
 server.js         # Node.js backend
 .env              # Environment variables
 README.md         # Project documentation
